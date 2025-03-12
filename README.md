@@ -38,6 +38,9 @@ npm install
 npm run dev
 ```
 
+![image](https://github.com/user-attachments/assets/dedf9eb0-14cc-4622-8531-b5fc7b7d1ff6)
+
+
 4. Running the test suite
 
 ```
