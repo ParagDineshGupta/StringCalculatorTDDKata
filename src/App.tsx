@@ -5,7 +5,7 @@ import { StringCalculator } from './StringCalculator';
 
 
 function App() {
-  const [result, setResult] = useState(null)
+  const [result, setResult] = useState(NaN)
 
   return (
     <>
