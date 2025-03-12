@@ -7,14 +7,14 @@ export class StringCalculator {
       const delimiter = this.getDelimiter(numbers);
       let numArray = numbers
         .replace(/\n+/g, delimiter)
-        // .replace(/\D+/g, " ")       // Remove non-digit characters and split by digits
+        // .replace(/\D+/g, " ")  // Remove non-digit characters
         .trim()
         .split(delimiter)
         .filter(Number);
 
-      console.log(delimiter, numArray);
+      // console.log(delimiter, numArray);
       const negatives = numArray.find((num) => +num < 0);
-      console.log(negatives);
+      // console.log(negatives);
       if (negatives) return "Negative numbers not allowed";
 
       const sum = numArray.reduce((sum, num) => sum + +num, 0);
