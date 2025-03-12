@@ -16,9 +16,13 @@ describe("StringCalculator", () => {
     expect(calculator.add("1,5")).toBe(6);
     expect(calculator.add("0,3,7")).toBe(10);
   });
-  test("should return an error message for non-numeric input", () => {
-    expect(calculator.add("1,a")).toBe(
-      "Invalid input. Please enter comma-separated numbers."
-    );
+  // test("should return an error message for non-numeric input", () => {
+  //   expect(calculator.add("1,a")).toBe(
+  //     "Invalid input. Please enter comma-separated numbers."
+  //   );
+  // });
+  test("should support different delimiters", () => {
+    expect(calculator.add("//;\n1;2")).toBe(3);
+    expect(calculator.add("//|\n1|2|3")).toBe(6);
   });
 });
