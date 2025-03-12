@@ -25,4 +25,10 @@ describe("StringCalculator", () => {
     expect(calculator.add("//;\n1;2")).toBe(3);
     expect(calculator.add("//|\n1|2|3")).toBe(6);
   });
+  test("should show error for negative numbers", () => {
+    expect(calculator.add("1,-1")).toBe("Negative numbers not allowed");
+    expect(calculator.add("//;\n1;-2;3;-4")).toBe(
+      "Negative numbers not allowed"
+    );
+  });
 });

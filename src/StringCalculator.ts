@@ -13,9 +13,12 @@ export class StringCalculator {
         .filter(Number);
 
       console.log(delimiter, numArray);
+      const negatives = numArray.find((num) => +num < 0);
+      console.log(negatives);
+      if (negatives) return "Negative numbers not allowed";
 
       const sum = numArray.reduce((sum, num) => sum + +num, 0);
-      return sum >= 0 ? sum : "Invalid input.";
+      return numArray.length ? sum : "Invalid input.";
     } catch (error) {
       console.error(error);
       return "Invalid input.";
