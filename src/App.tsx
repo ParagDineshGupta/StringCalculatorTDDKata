@@ -3,7 +3,7 @@ import './App.css';
 import { StringCalculator } from './StringCalculator';
 
 function App() {
-  const [result, setResult] = useState(NaN)
+  const [result, setResult] = useState<number | string>('')
   // console.log(result);
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
       <br />
       <button onClick={() => {
         const calculator = new StringCalculator()
-        const result = calculator.add(document.querySelector('textarea')?.value)
+        const result = calculator.add(document.querySelector('textarea')?.value ?? '')
         setResult(result)
       }}>Calculate</button>
       <p>Result: {result}</p>
